@@ -1,0 +1,49 @@
+﻿@model IEnumerable<uStoreMVC.Data.EF.Trip>
+
+@{
+    ViewBag.Title = "Trips";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
+ @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-4">
+                <p>
+                    <img src="~/Content/Images/Trips/@item.TipImage" alt="Imagesource" />
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.TripName)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.TripDescription)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </p>
+                <p>
+                    <span class="btn btn-default"> @Html.ActionLink("Details", "Details", new { id = item.TripId }) </span>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin") || User.IsInRole("Customer Service"))
+                    {
+                        <span class="btn btn-default">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.TripId })
+                        </span>
+                    }
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <span class="btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.TripId })</span>
+                    }
+
+
+
+                </p>
+
+            </div>
+        }

@@ -1,0 +1,55 @@
+﻿@model uStoreMVC.Data.EF.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnitsInStock)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="col-sm-6">
+        <img src="~/Content/Images/Products/@Model.ProductImage" alt="Product Image" title="@Model.ProductName" />
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+    
+    <div>
+
+        @*Products Partial View*@
+        <div class="container">
+            <div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
+                <div class="fh5co-project masonry-brick">
+                    @Html.Action("ProductsPV")
+                </div>
+            </div>
+        </div>
+
+        @*Trips Partial View*@
+        <div class="page-content">
+            <p>
+                @Html.Action("TripsPV")
+            </p>
+        </div>
+
+    </div> 
+
+
+         

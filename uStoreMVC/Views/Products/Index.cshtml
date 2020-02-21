@@ -1,0 +1,42 @@
+﻿@model IEnumerable<uStoreMVC.Data.EF.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-md-4">
+                <p>
+                    <img src="~/Content/Images/Products/@item.ProductImage" alt="Imagesource" />
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                <p>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </p>
+                <p>
+                    <span class="btn btn-default"> @Html.ActionLink("Details", "Details", new { id = item.ProductId }) </span>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin") || User.IsInRole("Customer Service"))
+                    {
+                        <span class="btn btn-default">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ProductId })
+                        </span>
+                    }
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <span class="btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.ProductId })</span>
+                    }
+
+
+
+                </p>
+
+            </div>
+        }

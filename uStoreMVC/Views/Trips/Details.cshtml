@@ -1,0 +1,54 @@
+﻿@model uStoreMVC.Data.EF.Trip
+
+@{
+    ViewBag.Title = "Details for " + Model.TripName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-sm-6">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.TripName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TripName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TripDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TripDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            @*<dt>
+                @Html.DisplayNameFor(model => model.TipImage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TipImage)
+            </dd>*@
+
+        </dl>
+    </div>
+    <div class="col-sm-6">
+        <img src="~/Content/Images/Trips/@Model.TipImage" alt="Trip cover" title="@Model.TripName" />
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TripId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

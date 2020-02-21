@@ -1,0 +1,25 @@
+﻿@model IEnumerable<uStoreMVC.Data.EF.Product>
+
+@foreach (var item in Model)
+{
+            <div class="fh5co-project masonry-brick col-md-2">
+                <a href="@Url.Action("ProductsPV", "Home", new { id = item.ProductId })" >
+                    <img class="img-responsive" src="~/Content/Images/Products/@item.ProductImage" alt="Imagesource" />
+                </a>
+                <p>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </p>
+                <p>
+                    <span class="btn btn-default"> @Html.ActionLink("Details", "Details", new { id = item.ProductId }) </span>
+                    @if (Request.IsAuthenticated && User.IsInRole("Admin") || User.IsInRole("Customer Service"))
+                    {
+                        <span class="btn btn-default">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ProductId })
+                        </span>
+                    }
+                </p>
+          </div>
+}

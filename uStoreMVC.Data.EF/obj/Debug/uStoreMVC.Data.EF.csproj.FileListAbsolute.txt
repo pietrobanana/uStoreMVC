@@ -1,0 +1,10 @@
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\uStoreMVC.Data.EF.dll.config
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\uStoreMVC.Data.EF.dll
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\uStoreMVC.Data.EF.pdb
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\EntityFramework.dll
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\EntityFramework.xml
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\obj\Debug\uStoreMVC.Data.EF.csprojResolveAssemblyReference.cache
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\obj\Debug\uStoreMVC.Data.EF.dll
+C:\Users\student\Documents\Visual Studio 2015\Projects\MVC1\uStoreMVC\uStoreMVC\uStoreMVC.Data.EF\obj\Debug\uStoreMVC.Data.EF.pdb

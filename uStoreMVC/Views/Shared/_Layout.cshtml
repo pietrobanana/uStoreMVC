@@ -1,0 +1,170 @@
+﻿
+    <!DOCTYPE html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js">
+     <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FREEHTML5.CO" />
+
+    <!--
+      //////////////////////////////////////////////////////
+
+      FREE HTML5 TEMPLATE
+      DESIGNED & DEVELOPED by FREEHTML5.CO
+
+      Website: 		http://freehtml5.co/
+      Email: 			info@freehtml5.co
+      Twitter: 		http://twitter.com/fh5co
+      Facebook: 		https://www.facebook.com/fh5co
+
+      //////////////////////////////////////////////////////
+       -->
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/Content/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+    <!-- Superfish -->
+    <link rel="stylesheet" href="~/Content/css/superfish.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="~/Content/css/flexslider.css">
+
+    <link rel="stylesheet" href="~/Content/css/style.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="~/Content/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+    <body>
+    <header id="fh5co-header" role="banner">
+        <div class="container text-center">
+            <div id="fh5co-logo">
+                <a href="@Url.Action("Index","Home")">
+                    <h1>uStore</h1>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    @RenderBody();
+
+        <footer>
+            <div id="contact" class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4>
+                            <strong>Contact</strong>
+                        </h4>
+                        <p>
+                            Kansas City, Missouri
+                        </p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:pietrogiovanna.1611@outlook.com">Email Me!</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.pinterest.com/pietro22/"><i class="fa fa-pinterest fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jorge-pietro/"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.behance.net/rockofjonah"><i class="fa fa-behance fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/caya_kc/"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">&copy; @DateTime.Now.Year jpietro.com</p>
+                    </div>
+                </div>
+            </div>
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </footer>
+    <!-- END #fh5co-footer -->
+
+    <!-- admin button -->
+    <div id="adminbtn" class="button" onclick="openNav()">
+        <span class="vertical-text">
+            Navigation
+        </span>
+    </div>
+
+    <!-- Admin Navigation Pane -->
+    <div id="adminnav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            &times;
+        </a>
+        <a href="@Url.Action("Index","Home")">Home</a>
+        <a href="@Url.Action("Contact", "Home")">Contact</a>
+        <a href="@Url.Action("About","Home")">About Us</a>
+        <a href="@Url.Action("Index","Products")">Products</a>
+        <a href="@Url.Action("Index","Trips")">Trips</a>
+    </div>
+    
+    <!--Scripts for navigation functionality -->
+    <script>
+        function openNav() {
+            document.getElementById('adminnav').style.width = '250px';
+            document.getElementById('adminbtn').style.display = 'none';
+        }
+
+
+        //Mini Lab
+        //Write the closeNav() function, and have it reset the styles we changed in openNav().
+        function closeNav() {
+            document.getElementById('adminnav').style.width = '0px';
+            document.getElementById('adminbtn').style.display = 'block';
+        }
+    </script>
+
+
+    <!-- jQuery -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- masonry -->
+    <script src="~/Content/js/jquery.masonry.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>
+
